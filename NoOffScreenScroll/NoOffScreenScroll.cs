@@ -67,6 +67,8 @@ namespace NoOffScreenScroll {
 			var panel = UnityEngine.Object.FindObjectOfType<OptionsGameplayPanel>();
 			if(panel == null) return;
 
+			//Unity reports the mouse being at the very edge of the window
+			//if it's actually outside.
 			var mouse = Input.mousePosition;
 			bool shouldStop = false;
 			if(mouse.x <= 0 || mouse.y <= 0
